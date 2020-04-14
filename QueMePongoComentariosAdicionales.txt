@@ -1,0 +1,47 @@
+Ejercicio: QueMePongo - Agregados/prosa
+
+esLibroLargo categoria paginas = ((paginas>).limitePaginas) categoria
+
+Requisitos: Poder determinar conjuntos para un cliente a partir de sus prendas, sus gustos y las caracteristicas del clima
+            Respetar tipos y categorias
+
+Consideraciones: Para filtrar por clima, concidero un filtro indivudual, segun respete color o tela
+                 Para filtar por preferencia, concidero un filtro individual y grupal, ya que puede haber filtros individuales por color o tela o tal vez en el 
+                 conjunto, como por ejemplo, querer tener dos o tres colores distintos, o todas las prendas de lino.
+                 Para filtrar pense en crear 4 listas segun su categorias filtradas por clima y preferencia indicidual, crear las combinaciones y luego filtrar las
+                 combinaciones por las preferencias grupales.
+                 Concidero los tipos como enum predeterminados y la categoria depediente del mismo sin posibilidad de variar
+                 Concidero tipos de telas, colores y factores del clima como enum predeterminados
+
+Posible funcion para generar los conjuntos:
+
+List<Prendas> listaPrendaSuperior
+List<Prendas> listaPrendaInferior
+List<Prendas> listaCalzado
+List<Prendas> listaAccesorio
+List<Prendas> listaAuxiliarDePrendas
+List<<Prendas>> listaDeConjuntos
+
+for(int i=0;i<listaPrendaSuperior.size();i++){
+
+for(int j=0;j<listaPrendaInferior.size();i++){
+
+for(int f=0;f<listaCalzado.size();f++){
+
+for(int k=-1;i<listaAccesorio.size();k++){
+
+if(k==-1)
+{listaAuxiliarDePrendas.add(listaPrendaSuperior.get(i));
+listaAuxiliarDePrendas.add(listaPrendaInferior.get(j));
+listaAuxiliarDePrendas.add(listaPrendaCalzado.get(f));
+listaConjuntos.add(listaAuxiliarDePrendas)
+listaAuxiliarDePrendas.clear()}
+
+else
+{listaAuxiliarDePrendas.add(listaPrendaSuperior.get(i));
+listaAuxiliarDePrendas.add(listaPrendaInferior.get(j));
+listaAuxiliarDePrendas.add(listaPrendaCalzado.get(f));
+listaAuxiliarDePrendas.add(listaPrendaAccesorio.get(i)); 
+listaConjuntos.add(listaAuxiliarDePrendas)}
+
+}}}}
