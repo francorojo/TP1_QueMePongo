@@ -1,0 +1,51 @@
+Ejercicio: QueMePongo - Agregados/prosa
+
+Requisitos: Poder determinar conjuntos para un cliente a partir de sus prendas, sus gustos y las caracteristicas del clima
+            Respetar tipos y categorias
+
+Posible funcion para generar los conjuntos:
+
+List<Prendas> listaPrendaSuperior
+List<Prendas> listaPrendaInferior
+List<Prendas> listaCalzado
+List<Prendas> listaAccesorio
+List<Prendas> listaAuxiliarDePrendas
+List<<Prendas>> listaDeConjuntos
+
+for(int i=0;i<listaPrendaSuperior.size();i++){
+
+for(int j=0;j<listaPrendaInferior.size();i++){
+
+for(int f=0;f<listaCalzado.size();f++){
+
+for(int k=-1;i<listaAccesorio.size();k++){
+
+if(k==-1)
+{listaAuxiliarDePrendas.add(listaPrendaSuperior.get(i));
+listaAuxiliarDePrendas.add(listaPrendaInferior.get(j));
+listaAuxiliarDePrendas.add(listaPrendaCalzado.get(f));
+listaConjuntos.add(listaAuxiliarDePrendas)
+listaAuxiliarDePrendas.clear()}
+
+else
+{listaAuxiliarDePrendas.add(listaPrendaSuperior.get(i));
+listaAuxiliarDePrendas.add(listaPrendaInferior.get(j));
+listaAuxiliarDePrendas.add(listaPrendaCalzado.get(f));
+listaAuxiliarDePrendas.add(listaPrendaAccesorio.get(i)); 
+listaConjuntos.add(listaAuxiliarDePrendas)}
+
+}}}}
+
+Nuevos requerimientos:
+
+Como administradore de QuéMePongo, quiero poder configurar fácilmente diferentes servicios de obtención del clima para ajustarme a las cambiantes condiciones económicas.
+Como stakeholder de QuéMePongo, quiero poder asegurar la calidad de mi aplicación sin incurrir en costos innecesarios. 
+
+Esto me llevo a pensar que en este caso podiamos tener un adaptador para entender la aplicacion del clima, este adaptador respeta una interface, para poder ser cambiado 
+con facilidad y luego poder usar otras aplicaciones
+
+Yo interprete que la clase QueMePongo o alguna que represente generar sugerencias conoce una condicionClimatica, donde existen atributos que filtran prendas
+Estos atributos tienen asociado un adaptador que le devuelve datos del clima actual, se me ocurrio que cada atributo pueda cambiar este adaptador para asi 
+tal vez se pueden elegir distintas aplicaciones para recolectar datos, donde capaz se elige una que es buena para la temperatura y otra que es buena para la humedad. 
+
+Ademas en este caso la aplicacion es un mock, para poder testear la calidad a traves de los test sin costos extras innecesarios
